@@ -43,7 +43,7 @@
             },
             "onclick": {
                 "enable": true,
-                "mode": "remove"
+                "mode": "repulse"
             },
             "resize": true
         },
