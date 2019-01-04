@@ -4,7 +4,8 @@
   <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="viewport" content="width=device-width,height=device-height initial-scale=1"> -->
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -70,16 +71,19 @@
 
         <!-- Featured Project Row -->
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-          <div class="col-xl-8 col-lg-7">
+            <div class=" col-xl-8 col-lg-7">
             <img class="img-fluid mb-3 mb-lg-0" src="img/ucr_parking_app.png" alt="">
-          </div>
-          <div class="col-xl-4 col-lg-5">
-            <div class="featured-text text-center text-lg-left">
-              <h4>UCR Parking App</h4>
-              <p class="text-black-50 mb-0">A parking app that helps UC Riverside students find available parking spaces.</p>
-              <p class="text-black-50 mb-0">Built using Java and Android Studio.</p>
             </div>
-          </div>
+
+            <div class="col-xl-4 col-lg-5">
+                <a class="links" href="https://github.com/jkane002/parkingapp" target="_blank">
+                    <div class="featured-text text-center text-lg-left">
+                    <h4>UCR Parking App</h4>
+                    <p class="text-black-50 mb-0">A parking app that helps UC Riverside students find available parking spaces.</p>
+                    <p class="text-black-50 mb-0">Built using Java and Android Studio.</p>
+                    </div>
+                </a>
+            </div>
         </div>
 
         <!-- Project One Row -->
@@ -87,14 +91,17 @@
           <div class="col-lg-6">
             <img class="img-fluid" src="img/Carnival_Game.png" alt="">
           </div>
+
           <div class="col-lg-6">
             <div class="bg-black text-center h-100 project">
               <div class="d-flex h-100">
                 <div class="project-text w-100 my-auto text-center text-lg-left">
+                    <a class="links" href="https://github.com/jkane002/CarnivalGamesVR" target="_blank">
                   <h4 class="text-white">VR Carnival Games</h4>
                   <p class="mb-0 text-white-50">A Carnival Experience built for the Oculus Rift.</p>
                   <p class="mb-0 text-white-50">Built using C# and Unity Game Engine.</p>
                   <hr class="d-none d-lg-block mb-0 ml-0">
+                    </a>
                 </div>
               </div>
             </div>
@@ -202,6 +209,29 @@
         function(){
             console.log('particles.json loaded...')
         })
+    </script>
+
+    <script>
+        (function ($) {
+            $(document).ready(function(){
+                if(window.innerHeight <= 992) {
+                    // hide .navbar first
+                    $(".navbar").hide();
+
+                    // fade in .navbar
+                    $(function () {
+                        $(window).scroll(function () {
+                            // set distance user needs to scroll before we start fadeIn
+                            if ($(this).scrollTop() > 50) {
+                                $('.navbar').fadeIn();
+                            } else {
+                                $('.navbar').fadeOut();
+                            }
+                        });
+                    });
+                }
+            });
+        }(jQuery));
     </script>
 
   </body>

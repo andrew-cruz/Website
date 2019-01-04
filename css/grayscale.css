@@ -42,6 +42,7 @@
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
+    visibility: visible;
     background-color: transparent;
     -webkit-transition: background-color 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
@@ -86,19 +87,14 @@
   }
 }
 
-#particles-js, #particles-js-info{
-    position: absolute;
-    height: auto;
-    width: 100%;
-}
-
 .masthead {
   position: relative;
   width: 100%;
   height: auto;
-  min-height: -webkit-fill-available;
+  min-height: 100vh;
   padding: 15rem 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616));
+  /* background-color: red; */
   background: linear-gradient(to bottom, black 0%,  #3c3c3c 75%, black 100%);
   background-position: center;
   background-repeat: no-repeat;
@@ -120,6 +116,13 @@
 .masthead h2 {
   max-width: 20rem;
   font-size: 1rem;
+}
+
+#particles-js, #particles-js-info{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -191,6 +194,16 @@
 
 .projects-section {
   padding: 10rem 0;
+}
+
+/* On mouse-over, add a deeper shadow */
+/* .cards:hover {
+  box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
+}*/
+
+.links {
+    color: #000;
+    text-decoration: none;
 }
 
 .projects-section .featured-text {
